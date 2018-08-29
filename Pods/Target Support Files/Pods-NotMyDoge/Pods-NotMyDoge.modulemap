@@ -1,0 +1,6 @@
+framework module Pods_NotMyDoge {
+  umbrella header "Pods-NotMyDoge-umbrella.h"
+
+  export *
+  module * { export * }
+}
