@@ -8,11 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		7B2B5B6121371C8C00A6AB47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2B5B6021371C8C00A6AB47 /* AppDelegate.swift */; };
-		7B2B5B6321371C8C00A6AB47 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2B5B6221371C8C00A6AB47 /* ViewController.swift */; };
 		7B2B5B6621371C8C00A6AB47 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B2B5B6421371C8C00A6AB47 /* Main.storyboard */; };
 		7B2B5B6821371C9500A6AB47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B2B5B6721371C9500A6AB47 /* Assets.xcassets */; };
 		7B2B5B6B21371C9500A6AB47 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B2B5B6921371C9500A6AB47 /* LaunchScreen.storyboard */; };
 		7B2B5B7621371C9500A6AB47 /* NotMyDogeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2B5B7521371C9500A6AB47 /* NotMyDogeTests.swift */; };
+		7B2C07652137C1810010EBA1 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2C07642137C1810010EBA1 /* APIManager.swift */; };
+		7B2C07672137C3DF0010EBA1 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2C07662137C3DF0010EBA1 /* Router.swift */; };
+		7B2C07692137C66F0010EBA1 /* DogeFetchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2C07682137C66F0010EBA1 /* DogeFetchRouter.swift */; };
+		7B2C076B2137CE7F0010EBA1 /* DogeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2C076A2137CE7F0010EBA1 /* DogeModel.swift */; };
+		7B2C076D2137D9080010EBA1 /* MyDogeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2C076C2137D9080010EBA1 /* MyDogeViewController.swift */; };
+		7B2C076F2137D9490010EBA1 /* MyDogeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2C076E2137D9490010EBA1 /* MyDogeViewModel.swift */; };
+		7B2C07712138215E0010EBA1 /* NetworkRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2C07702138215E0010EBA1 /* NetworkRequestManager.swift */; };
+		7B2C0773213840F50010EBA1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2C0772213840F50010EBA1 /* HomeViewController.swift */; };
+		7B2C07752138411D0010EBA1 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2C07742138411D0010EBA1 /* SplashViewController.swift */; };
+		7B2C0777213841700010EBA1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2C0776213841700010EBA1 /* User.swift */; };
+		7B2C0779213841D90010EBA1 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2C0778213841D90010EBA1 /* UserManager.swift */; };
+		7B2C077B2138789B0010EBA1 /* NSObject+ClassName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2C077A2138789B0010EBA1 /* NSObject+ClassName.swift */; };
+		7B2C077D213879E90010EBA1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2C077C213879E90010EBA1 /* LoginViewController.swift */; };
+		7B2C077F21387A210010EBA1 /* Initializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2C077E21387A210010EBA1 /* Initializable.swift */; };
+		7B2C078121387AA10010EBA1 /* UIStoryboard+Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2C078021387AA10010EBA1 /* UIStoryboard+Storyboard.swift */; };
+		7B2C0783213885940010EBA1 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2C0782213885940010EBA1 /* LoginViewModel.swift */; };
 		7BB37EF5D46EF3C7D2232F3D /* Pods_NotMyDoge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE02868C06AD70A67C71D6E7 /* Pods_NotMyDoge.framework */; };
 		E0094FA0806610468AC1FB4A /* Pods_NotMyDogeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDD99FB4DC103E6CF3346D6B /* Pods_NotMyDogeTests.framework */; };
 /* End PBXBuildFile section */
@@ -33,7 +48,6 @@
 		3EDEA5335B25EF167BC98578 /* Pods-NotMyDoge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NotMyDoge.release.xcconfig"; path = "Pods/Target Support Files/Pods-NotMyDoge/Pods-NotMyDoge.release.xcconfig"; sourceTree = "<group>"; };
 		7B2B5B5D21371C8C00A6AB47 /* NotMyDoge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NotMyDoge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B2B5B6021371C8C00A6AB47 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7B2B5B6221371C8C00A6AB47 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7B2B5B6521371C8C00A6AB47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7B2B5B6721371C9500A6AB47 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7B2B5B6A21371C9500A6AB47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -41,6 +55,22 @@
 		7B2B5B7121371C9500A6AB47 /* NotMyDogeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NotMyDogeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B2B5B7521371C9500A6AB47 /* NotMyDogeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotMyDogeTests.swift; sourceTree = "<group>"; };
 		7B2B5B7721371C9500A6AB47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7B2C07642137C1810010EBA1 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		7B2C07662137C3DF0010EBA1 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		7B2C07682137C66F0010EBA1 /* DogeFetchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogeFetchRouter.swift; sourceTree = "<group>"; };
+		7B2C076A2137CE7F0010EBA1 /* DogeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogeModel.swift; sourceTree = "<group>"; };
+		7B2C076C2137D9080010EBA1 /* MyDogeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDogeViewController.swift; sourceTree = "<group>"; };
+		7B2C076E2137D9490010EBA1 /* MyDogeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDogeViewModel.swift; sourceTree = "<group>"; };
+		7B2C07702138215E0010EBA1 /* NetworkRequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestManager.swift; sourceTree = "<group>"; };
+		7B2C0772213840F50010EBA1 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		7B2C07742138411D0010EBA1 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		7B2C0776213841700010EBA1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		7B2C0778213841D90010EBA1 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		7B2C077A2138789B0010EBA1 /* NSObject+ClassName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+ClassName.swift"; sourceTree = "<group>"; };
+		7B2C077C213879E90010EBA1 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		7B2C077E21387A210010EBA1 /* Initializable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Initializable.swift; sourceTree = "<group>"; };
+		7B2C078021387AA10010EBA1 /* UIStoryboard+Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Storyboard.swift"; sourceTree = "<group>"; };
+		7B2C0782213885940010EBA1 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		A4B3F3F25E5D35933E6D3AB0 /* Pods-NotMyDogeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NotMyDogeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NotMyDogeTests/Pods-NotMyDogeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EDD99FB4DC103E6CF3346D6B /* Pods_NotMyDogeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NotMyDogeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE02868C06AD70A67C71D6E7 /* Pods_NotMyDoge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NotMyDoge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -109,9 +139,11 @@
 		7B2B5B5F21371C8C00A6AB47 /* NotMyDoge */ = {
 			isa = PBXGroup;
 			children = (
+				7B5B257F213A58A70024BEBB /* Network */,
+				7B5B2577213A570C0024BEBB /* Controllers */,
+				7B5B2583213A598B0024BEBB /* Model */,
+				7B5B2584213A59AB0024BEBB /* Helpers */,
 				7B2B5B6021371C8C00A6AB47 /* AppDelegate.swift */,
-				7B2B5B6221371C8C00A6AB47 /* ViewController.swift */,
-				7B2B5B6421371C8C00A6AB47 /* Main.storyboard */,
 				7B2B5B6721371C9500A6AB47 /* Assets.xcassets */,
 				7B2B5B6921371C9500A6AB47 /* LaunchScreen.storyboard */,
 				7B2B5B6C21371C9500A6AB47 /* Info.plist */,
@@ -126,6 +158,131 @@
 				7B2B5B7721371C9500A6AB47 /* Info.plist */,
 			);
 			path = NotMyDogeTests;
+			sourceTree = "<group>";
+		};
+		7B5B2577213A570C0024BEBB /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7B5B257D213A58140024BEBB /* Splash */,
+				7B5B257B213A57650024BEBB /* Login */,
+				7B5B2578213A57240024BEBB /* Home */,
+				7B5B2579213A57420024BEBB /* MyDoge */,
+				7B2B5B6421371C8C00A6AB47 /* Main.storyboard */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		7B5B2578213A57240024BEBB /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				7B2C0772213840F50010EBA1 /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		7B5B2579213A57420024BEBB /* MyDoge */ = {
+			isa = PBXGroup;
+			children = (
+				7B5B257A213A57540024BEBB /* ViewModel */,
+				7B2C076C2137D9080010EBA1 /* MyDogeViewController.swift */,
+			);
+			path = MyDoge;
+			sourceTree = "<group>";
+		};
+		7B5B257A213A57540024BEBB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				7B2C076E2137D9490010EBA1 /* MyDogeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		7B5B257B213A57650024BEBB /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				7B5B257C213A57830024BEBB /* ViewModel */,
+				7B2C077C213879E90010EBA1 /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		7B5B257C213A57830024BEBB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				7B2C0782213885940010EBA1 /* LoginViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		7B5B257D213A58140024BEBB /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				7B2C07742138411D0010EBA1 /* SplashViewController.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		7B5B257F213A58A70024BEBB /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				7B5B2582213A593B0024BEBB /* NetworkLayer */,
+				7B5B2580213A58E10024BEBB /* Routers */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		7B5B2580213A58E10024BEBB /* Routers */ = {
+			isa = PBXGroup;
+			children = (
+				7B2C07662137C3DF0010EBA1 /* Router.swift */,
+				7B5B2581213A59190024BEBB /* DogeFetchRouter */,
+			);
+			path = Routers;
+			sourceTree = "<group>";
+		};
+		7B5B2581213A59190024BEBB /* DogeFetchRouter */ = {
+			isa = PBXGroup;
+			children = (
+				7B2C07682137C66F0010EBA1 /* DogeFetchRouter.swift */,
+			);
+			path = DogeFetchRouter;
+			sourceTree = "<group>";
+		};
+		7B5B2582213A593B0024BEBB /* NetworkLayer */ = {
+			isa = PBXGroup;
+			children = (
+				7B2C07642137C1810010EBA1 /* APIManager.swift */,
+				7B2C07702138215E0010EBA1 /* NetworkRequestManager.swift */,
+			);
+			path = NetworkLayer;
+			sourceTree = "<group>";
+		};
+		7B5B2583213A598B0024BEBB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7B2C0776213841700010EBA1 /* User.swift */,
+				7B2C076A2137CE7F0010EBA1 /* DogeModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7B5B2584213A59AB0024BEBB /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				7B5B2585213A59DC0024BEBB /* Initializable */,
+				7B2C0778213841D90010EBA1 /* UserManager.swift */,
+				7B2C077A2138789B0010EBA1 /* NSObject+ClassName.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		7B5B2585213A59DC0024BEBB /* Initializable */ = {
+			isa = PBXGroup;
+			children = (
+				7B2C077E21387A210010EBA1 /* Initializable.swift */,
+				7B2C078021387AA10010EBA1 /* UIStoryboard+Storyboard.swift */,
+			);
+			path = Initializable;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -295,8 +452,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7B2B5B6321371C8C00A6AB47 /* ViewController.swift in Sources */,
+				7B2C077D213879E90010EBA1 /* LoginViewController.swift in Sources */,
+				7B2C077F21387A210010EBA1 /* Initializable.swift in Sources */,
+				7B2C076B2137CE7F0010EBA1 /* DogeModel.swift in Sources */,
+				7B2C078121387AA10010EBA1 /* UIStoryboard+Storyboard.swift in Sources */,
+				7B2C076F2137D9490010EBA1 /* MyDogeViewModel.swift in Sources */,
+				7B2C07692137C66F0010EBA1 /* DogeFetchRouter.swift in Sources */,
+				7B2C0773213840F50010EBA1 /* HomeViewController.swift in Sources */,
+				7B2C07672137C3DF0010EBA1 /* Router.swift in Sources */,
+				7B2C07652137C1810010EBA1 /* APIManager.swift in Sources */,
+				7B2C0779213841D90010EBA1 /* UserManager.swift in Sources */,
+				7B2C0783213885940010EBA1 /* LoginViewModel.swift in Sources */,
+				7B2C076D2137D9080010EBA1 /* MyDogeViewController.swift in Sources */,
+				7B2C077B2138789B0010EBA1 /* NSObject+ClassName.swift in Sources */,
+				7B2C07712138215E0010EBA1 /* NetworkRequestManager.swift in Sources */,
 				7B2B5B6121371C8C00A6AB47 /* AppDelegate.swift in Sources */,
+				7B2C07752138411D0010EBA1 /* SplashViewController.swift in Sources */,
+				7B2C0777213841700010EBA1 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,7 +630,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8M8EB3JWC4;
 				INFOPLIST_FILE = NotMyDoge/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -476,7 +650,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8M8EB3JWC4;
 				INFOPLIST_FILE = NotMyDoge/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
