@@ -22,7 +22,6 @@ class NetworkRequestManager: NSObject {
         self.apiManager = apiManager
     }
     
-    
     //MARK: - Function
     
     /**

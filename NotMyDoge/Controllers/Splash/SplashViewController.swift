@@ -9,10 +9,10 @@
 import UIKit
 
 class SplashViewController: UIViewController {
+   
     //MARK: - Var
     
     var loginViewController: LoginViewController!
-    
     
     //MARK: - View Cycle
     
