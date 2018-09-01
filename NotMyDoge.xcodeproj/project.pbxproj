@@ -28,6 +28,13 @@
 		7B2C077F21387A210010EBA1 /* Initializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2C077E21387A210010EBA1 /* Initializable.swift */; };
 		7B2C078121387AA10010EBA1 /* UIStoryboard+Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2C078021387AA10010EBA1 /* UIStoryboard+Storyboard.swift */; };
 		7B2C0783213885940010EBA1 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2C0782213885940010EBA1 /* LoginViewModel.swift */; };
+		7B5B2587213A61F10024BEBB /* APIManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5B2586213A61F10024BEBB /* APIManagerMock.swift */; };
+		7B5B2589213A65600024BEBB /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5B2588213A65600024BEBB /* Model.swift */; };
+		7B5B258D213A99DA0024BEBB /* doge.json in Resources */ = {isa = PBXBuildFile; fileRef = 7B5B258C213A99B00024BEBB /* doge.json */; };
+		7B5B258E213A9A5A0024BEBB /* doge.json in Resources */ = {isa = PBXBuildFile; fileRef = 7B5B258C213A99B00024BEBB /* doge.json */; };
+		7B5B2590213A9D080024BEBB /* FileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5B258F213A9D080024BEBB /* FileRouter.swift */; };
+		7B5B2592213A9FD30024BEBB /* dogecorrupt.json in Resources */ = {isa = PBXBuildFile; fileRef = 7B5B2591213A9F100024BEBB /* dogecorrupt.json */; };
+		7B5B2593213A9FD40024BEBB /* dogecorrupt.json in Resources */ = {isa = PBXBuildFile; fileRef = 7B5B2591213A9F100024BEBB /* dogecorrupt.json */; };
 		7BB37EF5D46EF3C7D2232F3D /* Pods_NotMyDoge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE02868C06AD70A67C71D6E7 /* Pods_NotMyDoge.framework */; };
 		E0094FA0806610468AC1FB4A /* Pods_NotMyDogeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDD99FB4DC103E6CF3346D6B /* Pods_NotMyDogeTests.framework */; };
 /* End PBXBuildFile section */
@@ -71,6 +78,11 @@
 		7B2C077E21387A210010EBA1 /* Initializable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Initializable.swift; sourceTree = "<group>"; };
 		7B2C078021387AA10010EBA1 /* UIStoryboard+Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Storyboard.swift"; sourceTree = "<group>"; };
 		7B2C0782213885940010EBA1 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		7B5B2586213A61F10024BEBB /* APIManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManagerMock.swift; sourceTree = "<group>"; };
+		7B5B2588213A65600024BEBB /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		7B5B258C213A99B00024BEBB /* doge.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = doge.json; sourceTree = "<group>"; };
+		7B5B258F213A9D080024BEBB /* FileRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileRouter.swift; sourceTree = "<group>"; };
+		7B5B2591213A9F100024BEBB /* dogecorrupt.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = dogecorrupt.json; sourceTree = "<group>"; };
 		A4B3F3F25E5D35933E6D3AB0 /* Pods-NotMyDogeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NotMyDogeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NotMyDogeTests/Pods-NotMyDogeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EDD99FB4DC103E6CF3346D6B /* Pods_NotMyDogeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NotMyDogeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE02868C06AD70A67C71D6E7 /* Pods_NotMyDoge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NotMyDoge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -154,7 +166,10 @@
 		7B2B5B7421371C9500A6AB47 /* NotMyDogeTests */ = {
 			isa = PBXGroup;
 			children = (
+				7B5B2594213AA1080024BEBB /* JsonFiles */,
 				7B2B5B7521371C9500A6AB47 /* NotMyDogeTests.swift */,
+				7B5B258F213A9D080024BEBB /* FileRouter.swift */,
+				7B5B2586213A61F10024BEBB /* APIManagerMock.swift */,
 				7B2B5B7721371C9500A6AB47 /* Info.plist */,
 			);
 			path = NotMyDogeTests;
@@ -260,8 +275,9 @@
 		7B5B2583213A598B0024BEBB /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				7B2C0776213841700010EBA1 /* User.swift */,
-				7B2C076A2137CE7F0010EBA1 /* DogeModel.swift */,
+				7B5B258B213A68240024BEBB /* MyDogeModel */,
+				7B5B258A213A68170024BEBB /* User */,
+				7B5B2588213A65600024BEBB /* Model.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -283,6 +299,31 @@
 				7B2C078021387AA10010EBA1 /* UIStoryboard+Storyboard.swift */,
 			);
 			path = Initializable;
+			sourceTree = "<group>";
+		};
+		7B5B258A213A68170024BEBB /* User */ = {
+			isa = PBXGroup;
+			children = (
+				7B2C0776213841700010EBA1 /* User.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		7B5B258B213A68240024BEBB /* MyDogeModel */ = {
+			isa = PBXGroup;
+			children = (
+				7B2C076A2137CE7F0010EBA1 /* DogeModel.swift */,
+			);
+			path = MyDogeModel;
+			sourceTree = "<group>";
+		};
+		7B5B2594213AA1080024BEBB /* JsonFiles */ = {
+			isa = PBXGroup;
+			children = (
+				7B5B258C213A99B00024BEBB /* doge.json */,
+				7B5B2591213A9F100024BEBB /* dogecorrupt.json */,
+			);
+			path = JsonFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -369,7 +410,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B5B258E213A9A5A0024BEBB /* doge.json in Resources */,
 				7B2B5B6B21371C9500A6AB47 /* LaunchScreen.storyboard in Resources */,
+				7B5B2593213A9FD40024BEBB /* dogecorrupt.json in Resources */,
 				7B2B5B6821371C9500A6AB47 /* Assets.xcassets in Resources */,
 				7B2B5B6621371C8C00A6AB47 /* Main.storyboard in Resources */,
 			);
@@ -379,6 +422,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B5B2592213A9FD30024BEBB /* dogecorrupt.json in Resources */,
+				7B5B258D213A99DA0024BEBB /* doge.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,6 +506,7 @@
 				7B2C0773213840F50010EBA1 /* HomeViewController.swift in Sources */,
 				7B2C07672137C3DF0010EBA1 /* Router.swift in Sources */,
 				7B2C07652137C1810010EBA1 /* APIManager.swift in Sources */,
+				7B5B2589213A65600024BEBB /* Model.swift in Sources */,
 				7B2C0779213841D90010EBA1 /* UserManager.swift in Sources */,
 				7B2C0783213885940010EBA1 /* LoginViewModel.swift in Sources */,
 				7B2C076D2137D9080010EBA1 /* MyDogeViewController.swift in Sources */,
@@ -476,6 +522,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B5B2587213A61F10024BEBB /* APIManagerMock.swift in Sources */,
+				7B5B2590213A9D080024BEBB /* FileRouter.swift in Sources */,
 				7B2B5B7621371C9500A6AB47 /* NotMyDogeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

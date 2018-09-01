@@ -10,7 +10,7 @@ import UIKit
 import ObjectMapper
 
 class DogeModel: Model {
-
+    
     //MARK: - Vars
     
     //Returns URL from the string url
@@ -20,7 +20,7 @@ class DogeModel: Model {
     
     //Returns the name of breed from the URL
     var breedName: String {
-       return splitDogeBreedFromImageURL(urlString: imageURL ?? "")
+        return splitDogeBreedFromImageURL(urlString: imageURL ?? "")
     }
     
     //Returns true if status is "success"
@@ -30,23 +30,23 @@ class DogeModel: Model {
     
     private var status : String?
     private var imageURL : String?
-   
+    
     //MARK: - Init
     
     required init?(map: ModelMap) {
         imageURL <- map["message"]
         status <- map["status"]
     }
-
+    
     //MARK: Functions
     
     func mapping(map: ModelMap) {
-
+        
     }
     
     /**
-    Splits the URL by '/' and gets the index of the string breeds from the array and since its certain that the breed name is right after the breeds string in the array so adding 1 into the breeds string index to get the name of the breed.
-    **/
+     Splits the URL by '/' and gets the index of the string breeds from the array and since its certain that the breed name is right after the breeds string in the array so adding 1 into the breeds string index to get the name of the breed.
+     **/
     
     private func splitDogeBreedFromImageURL(urlString: String) -> String {
         let splitedArray = urlString.split(separator: "/")

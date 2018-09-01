@@ -14,6 +14,7 @@ enum DogeFetchRouter: Router {
 }
 
 extension DogeFetchRouter {
+    
     //Create Request to fetch random breed
     func asURLRequest() throws -> URLRequest {
         let result: (path: String, parameters: Parameters) = {

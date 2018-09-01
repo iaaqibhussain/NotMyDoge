@@ -30,15 +30,16 @@ class MyDogeViewController: UIViewController {
         setupViewModelCallbacks()
         viewModel.thatsNotMyDoge()
     }
-
+    
     //MARK: - Private Functions
     
     //View and ViewModel Binding
     private func setupViewModelCallbacks() {
+        
         //Shows or hides loader and enable/disables the button
         viewModel.loader = { [weak self] state in
             guard let `self` = self else { fatalError("self is nil") }
-    
+            
             self.notMyDogeButton.isEnabled = !state
             if state {
                 self.view.makeToastActivity(.center)
@@ -46,6 +47,7 @@ class MyDogeViewController: UIViewController {
                 self.view.hideToastActivity()
             }
         }
+        
         //loads the data
         viewModel.showData = { [weak self] dogeModel in
             guard let `self` = self else { fatalError("self is nil") }
@@ -69,12 +71,12 @@ class MyDogeViewController: UIViewController {
         }
         
         self.dogeImageImageView.kf.setImage(with: dogeImageURL, placeholder: #imageLiteral(resourceName: "doge"), completionHandler: { [weak self] (_, _, _, _) in
-         
+            
             guard let `self` = self else { fatalError("self is nil") }
             self.viewModel.loader(false)
             self.dogeBreedLabel.text = dogeModel.breedName
         })
-
+        
     }
     
     //MARK: - Action

@@ -8,8 +8,8 @@
 
 import UIKit
 /**
-    The sole purpose of this class is to be used for ViewControllers transitions
-    instead of using segues
+ The sole purpose of this protocol is to be used for ViewControllers transitions
+ instead of using segues
  **/
 
 protocol Initializable {

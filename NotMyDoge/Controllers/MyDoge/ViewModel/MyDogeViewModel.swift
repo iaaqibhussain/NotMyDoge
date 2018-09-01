@@ -13,6 +13,7 @@ class MyDogeViewModel: NSObject {
     //MARK: - Vars
     
     private let manager: NetworkRequestManager
+    private(set) var dogeModel: DogeModel? = nil
     //Callbacks to update UI
     var loader: (_ status: Bool) -> ()
     var showMessage: (_ message: String) -> ()
@@ -27,13 +28,13 @@ class MyDogeViewModel: NSObject {
         showData = { _  in }
     }
     
-    //MARK: - Function
+    //MARK: - Functions
     
-    func thatsNotMyDoge() {
+    func thatsNotMyDoge(router: Router = DogeFetchRouter.dogeFetch) {
         loader(true)
-        manager.request(urlRequest: DogeFetchRouter.dogeFetch, success: { [weak self] (dogeModel: DogeModel) in
+        manager.request(router: router, success: { [weak self] (dogeModel: DogeModel) in
             guard let `self` = self, let status = dogeModel.success else { return }
-            
+            self.dogeModel = dogeModel
             if status {
                 self.showData(dogeModel)
             } else {
@@ -47,7 +48,7 @@ class MyDogeViewModel: NSObject {
     }
     
     func logout() {
-      UserManager.shared.deleteUser()
+        UserManager.shared.deleteUser()
     }
-
+    
 }

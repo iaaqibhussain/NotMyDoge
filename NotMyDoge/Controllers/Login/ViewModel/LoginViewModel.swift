@@ -9,7 +9,7 @@
 import UIKit
 
 class LoginViewModel: NSObject {
-
+    
     //MARK: - Vars
     
     private let userManager: UserManager
@@ -19,7 +19,7 @@ class LoginViewModel: NSObject {
     //MARK: - Initialzier
     
     init(userManager: UserManager = UserManager.shared) {
-       self.userManager = userManager
+        self.userManager = userManager
         loginSuccess = {}
     }
     

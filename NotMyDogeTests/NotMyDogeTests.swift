@@ -7,6 +7,7 @@
 //
 
 import XCTest
+import Alamofire
 @testable import NotMyDoge
 
 class NotMyDogeTests: XCTestCase {
@@ -21,16 +22,55 @@ class NotMyDogeTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    /**
+     API layer gets tested here in the ViewModel
+     **/
+    
+    func testMyDogeViewModelSuccess() {
+        
+        let manager = NetworkRequestManager(apiManager: APIManagerMock())
+        let viewModel = MyDogeViewModel(apiManager: manager)
+        viewModel.thatsNotMyDoge(router: FileRouter.success)
+        guard let dogeModel = viewModel.dogeModel else { return XCTFail() }
+        XCTAssertEqual(dogeModel.breedName, "Basenji")
+        XCTAssertEqual(dogeModel.success, true)
+        XCTAssertEqual(dogeModel.dogeImageURL, URL(string: "https://images.dog.ceo/breeds/basenji/n02110806_518.jpg"))
+        
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    /**
+     Separately testing the layer
+     **/
+    func testNetworkRequestManager() {
+        let manager = NetworkRequestManager(apiManager: APIManagerMock())
+        var dogeModel: DogeModel?
+        
+        manager.request(router: FileRouter.success, success: { (model: DogeModel) in
+            dogeModel = model
+        }) { (error) in }
+        
+        XCTAssertEqual(dogeModel?.breedName, "Basenji")
+        XCTAssertEqual(dogeModel?.success, true)
+        XCTAssertEqual(dogeModel?.dogeImageURL, URL(string: "https://images.dog.ceo/breeds/basenji/n02110806_518.jpg"))
     }
     
+    //In case data is corrupted or with false data
+    
+    func testMyDogeViewModelFailure() {
+        
+        let manager = NetworkRequestManager(apiManager: APIManagerMock())
+        let viewModel = MyDogeViewModel(apiManager: manager)
+        viewModel.thatsNotMyDoge(router: FileRouter.failure)
+        guard let dogeModel = viewModel.dogeModel else { return XCTFail() }
+        XCTAssertEqual(dogeModel.breedName, "NA")
+        XCTAssertEqual(dogeModel.success, false)
+        XCTAssertEqual(dogeModel.dogeImageURL, nil)
+        
+    }
+    
+    
+    func testDogeFetchRouter() {
+        let router = DogeFetchRouter.dogeFetch
+        XCTAssertEqual(router.urlRequest?.url, URL(string: "\(router.baseURL)/api/breeds/image/random"))
+    }
 }
