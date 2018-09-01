@@ -10,8 +10,12 @@ import UIKit
 
 class User: NSObject, NSCoding {
     
+    //MARK: - Vars
+    
     let userName: String
     let password: String
+    
+    //MARK: - Init
     
     init(userName: String, password: String) {
         self.userName = userName
