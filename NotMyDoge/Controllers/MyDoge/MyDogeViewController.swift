@@ -38,26 +38,25 @@ class MyDogeViewController: UIViewController {
         
         //Shows or hides loader and enable/disables the button
         viewModel.loader = { [weak self] state in
-            guard let `self` = self else { fatalError("self is nil") }
             
-            self.notMyDogeButton.isEnabled = !state
+            self?.notMyDogeButton.isEnabled = !state
             if state {
-                self.view.makeToastActivity(.center)
+                self?.view.makeToastActivity(.center)
             } else {
-                self.view.hideToastActivity()
+                self?.view.hideToastActivity()
             }
         }
         
         //loads the data
         viewModel.showData = { [weak self] dogeModel in
-            guard let `self` = self else { fatalError("self is nil") }
-            self.setDataToUI(dogeModel: dogeModel)
+  
+            self?.setDataToUI(dogeModel: dogeModel)
         }
         
         //Shows any error message
         viewModel.showMessage = { [weak self] message in
-            guard let `self` = self else { fatalError("self is nil") }
-            self.view.makeToast(message, duration: 1, position: .center)
+
+            self?.view.makeToast(message, duration: 1, position: .center)
         }
         
     }
@@ -72,9 +71,8 @@ class MyDogeViewController: UIViewController {
         
         self.dogeImageImageView.kf.setImage(with: dogeImageURL, placeholder: #imageLiteral(resourceName: "doge"), completionHandler: { [weak self] (_, _, _, _) in
             
-            guard let `self` = self else { fatalError("self is nil") }
-            self.viewModel.loader(false)
-            self.dogeBreedLabel.text = dogeModel.breedName
+            self?.viewModel.loader(false)
+            self?.dogeBreedLabel.text = dogeModel.breedName
         })
         
     }
